@@ -2,8 +2,11 @@
 data/*
 !data/.gitkeep
 
-# Test purpose
-test.ipynb
+results/*
+!results/.gitkeep
+
+# Junk
+junk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
