@@ -1,0 +1,8 @@
+# env files
+dotenv
+
+# Visualization
+matplotlib
+
+# Jupyter Notebook
+ipykernel
