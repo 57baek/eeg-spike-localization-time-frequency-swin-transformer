@@ -5,7 +5,7 @@ import scipy.signal
 from ..config.parameters import pre_sec, post_sec, eeg_ds_factor, min_segment_len_sec
 
 
-def extract_seizure_segments(mat_path, struct_key):
+def extract_seizure_segment(mat_path, struct_key):
     if post_sec + pre_sec < min_segment_len_sec:
         raise ValueError(
             f"Segment too short (change pre_sec and post_sec): {post_sec + pre_sec}s"
