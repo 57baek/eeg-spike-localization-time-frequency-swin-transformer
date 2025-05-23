@@ -6,3 +6,6 @@ matplotlib
 
 # Jupyter Notebook
 ipykernel
+
+numpy
+scipy

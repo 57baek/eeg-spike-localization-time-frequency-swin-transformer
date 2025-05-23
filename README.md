@@ -7,8 +7,8 @@ INPUT_DIR
             - seizureData2.mat
             - ...
         - NIZ
-            - seizureData1.mat
-            - seizureData2.mat
+            - data1.mat
+            - data2.mat
             - ...
     - patient2
         - IOZ
@@ -16,8 +16,8 @@ INPUT_DIR
             - seizureData2.mat
             - ...
         - NIZ
-            - seizureData1.mat
-            - seizureData2.mat
+            - data1.mat
+            - data2.mat
             - ...
     - ...
 
