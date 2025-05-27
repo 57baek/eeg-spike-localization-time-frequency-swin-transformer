@@ -24,3 +24,9 @@ INPUT_DIR
 OUTPUT_DIR
 
 STRUCT_KEY
+
+
+Need optimization for both eeg_ds_factor and tf_ds_factor since we could just 
+eeg_ds_factor = fs // eeg_fs_target
+fs_ds = fs // eeg_ds_factor
+tf_ds_factor = fs_ds // tf_fs

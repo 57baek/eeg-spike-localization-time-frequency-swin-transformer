@@ -1,7 +1,16 @@
-# env files
+# --------------------
+# time_frequency_analysis.1_extract_seizure_segment
+# --------------------
 dotenv
 
+# --------------------
+# time_frequency_analysis.1_extract_seizure_segment
+# --------------------
 numpy
 scipy.io
 scipy.signal
 
+# --------------------
+# time_frequency_analysis.2_time_frequency_transform
+# --------------------
+PyWavelets

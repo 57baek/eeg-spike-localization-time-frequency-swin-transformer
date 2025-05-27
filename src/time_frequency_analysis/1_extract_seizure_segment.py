@@ -36,7 +36,7 @@ def extract_seizure_segment(mat_path, struct_key):
 
         segment_ds = scipy.signal.resample(segment, len(segment) // eeg_ds_factor)
         fs_ds = fs // eeg_ds_factor
-        tf_ons = pre_idx // fs
+        tf_ons = int(pre_sec)
 
         if start == 0:
             tf_ons = onset_idx // fs
