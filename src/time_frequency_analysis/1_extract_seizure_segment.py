@@ -7,9 +7,7 @@ from ..config.parameters import pre_sec, post_sec, eeg_ds_factor, min_segment_le
 
 def extract_seizure_segment(mat_path, struct_key):
     if post_sec + pre_sec < min_segment_len_sec:
-        raise ValueError(
-            f"Segment too short (change pre_sec and post_sec): {post_sec + pre_sec}s"
-        )
+        raise ValueError(f"SEGMENT TOO SHORT: {post_sec + pre_sec}s")
 
     try:
         mat = scipy.io.loadmat(mat_path, struct_as_record=False, squeeze_me=True)
@@ -20,7 +18,7 @@ def extract_seizure_segment(mat_path, struct_key):
         T = data_struct.T
 
         if T is None or len(np.atleast_1d(T)) < 1 or np.isnan(T[0]):
-            print(f"[SKIP] Invalid or missing seizure onset in: {mat_path}")
+            print(f"[SKIP] INVALID OR MISSING SEIZURE ONSET IN {mat_path}")
             return None, None, None
 
         onset_idx = int(T[0])
@@ -44,5 +42,5 @@ def extract_seizure_segment(mat_path, struct_key):
         return segment_ds, fs_ds, tf_ons
 
     except Exception as e:
-        print(f"[ERROR] Failed to extract seizure from {mat_path}: {e}")
+        print(f"[ERROR] FAILED TO EXTRACT SEIZURE FROM {mat_path}: {e}")
         return None, None, None
