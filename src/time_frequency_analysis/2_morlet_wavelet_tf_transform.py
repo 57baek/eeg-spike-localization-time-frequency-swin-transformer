@@ -3,7 +3,7 @@ import pywt
 
 from ..config.parameters import fmin, fmax, num_freq, wv, tf_ds_factor
 
-def morlet_wavelet_transform(segment_ds, fs_ds, mat_path):
+def morlet_wavelet_tf_transform(segment_ds, fs_ds, mat_path):
     
     try:
         freqs = np.linspace(fmin, fmax, num_freq)

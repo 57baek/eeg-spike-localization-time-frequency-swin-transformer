@@ -1,3 +1,7 @@
+1. check whether tf_tensor is equal to tf_np if (tf_tensor = torch.tensor(power_spectrogram, dtype=float32)) and (tf_np = tf_tensor.numpy())
+2. visualize both _tf.pkl and _tf1.pkl to show that optimized pickle.dump code works
+3. try gpu and torch for the visualization and tensor vs. numpy check
+
 INPUT_DIR
 
 INPUT_DIR
